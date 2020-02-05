@@ -1,0 +1,13 @@
+var el = document.getElementById("main"),
+    two = new Two({ 
+        fullscreen: true
+    });
+ 
+two.appendTo(el);
+
+var circle = two.makeCircle(110, 110, 100);
+circle.fill = "#881111";
+ 
+two.update();
+
+// I achieved this by reading this website https://code.tutsplus.com/tutorials/drawing-with-twojs--net-32024
