@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="image_src" href="../images/logo.gif" />
     <link rel="shortcut icon" type="image/gif" href="../images/favicon.gif">
+    <script src="two.js"></script>
+    <script src="url.js"></script>
+    <script src="jquery.js"></script>
+    <script src="three.js"></script>
 
   </head>
   <body>
     <div class="scripts">
-      <script src="../third-party/two.js"></script>
-      <script src="../third-party/url.js"></script>
-      <script src="../third-party/jquery.js"></script>
-      <script src="../third-party/three.js"></script>
 
       <script>
 
@@ -37,9 +37,9 @@
         var shape = extractShape(jigsaw);
 
         var geometry = new THREE.ExtrudeGeometry(shape, {
-          depth: 0,
+          depth: 20,
           curveSegments: 64,
-          bevelThickness: 2
+          bevelThickness: 5
         });
 
         geometry.computeBoundingSphere();
@@ -66,7 +66,7 @@
             height: 400
           });
 
-          var corners = 4;
+          var corners = 8;
           var points = [];
           var prev, anchor;
 
